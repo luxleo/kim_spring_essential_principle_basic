@@ -8,7 +8,9 @@ import hello.core.member.MemberServiceImpl;
 public class MemberApp {
     //psvm 단축키로 생성
     public static void main(String[] args) {
-        MemberService memberService = new MemberServiceImpl();
+        AppConfig appConfig = new AppConfig();
+        MemberService memberService = appConfig.memberService();
+        //MemberService memberService = new MemberServiceImpl();
         Member memberA = new Member(1L, "memberA", Grade.VIP); // cmd + option + v 로 자동 선언 및 할당
 
         memberService.join(memberA);
