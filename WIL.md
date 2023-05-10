@@ -88,6 +88,14 @@
 - 
 3. @PostConstruct,@PreDestroy -> javax
 - 자바 자체에서 제공한다. 가장 권장 되는 방식
+--- 빈 스코프
+1. prototype,singleton
+2. singleton안에서 prototype을 함께 사용할떄: 반복 생성 안되는 문제
+- Provider, ObjectProvider로 해결
+-- 스코프와 프록시
+@Scopr(value="request", proxyMode=ScopedProxyMode.TARGET_CLASS)
+를 이용하여, Provider와 같이 지연생성이 가능하다.
+단 어노테이션 만으로 싱글톤 빈과 같이 사용함으로써 다형성을 지키는 더 편리한 형태
 ```
 
 ### 객체지향

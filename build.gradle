@@ -21,6 +21,9 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
+	implementation 'javax.inject:javax.inject:1' // Dependency Lookup(DL)을 구현하기 위해 필요한 자바 표준 라이브러리
+	//web lib 추가
+	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	//lombok config start
 	compileOnly 'org.projectlombok:lombok'
